@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AIcourse-education-web/static/css/main.14e656c4.css",
+    "main.js": "/AIcourse-education-web/static/js/main.9b65f621.js",
+    "index.html": "/AIcourse-education-web/index.html",
+    "main.14e656c4.css.map": "/AIcourse-education-web/static/css/main.14e656c4.css.map",
+    "main.9b65f621.js.map": "/AIcourse-education-web/static/js/main.9b65f621.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14e656c4.css",
+    "static/js/main.9b65f621.js"
+  ]
+}
