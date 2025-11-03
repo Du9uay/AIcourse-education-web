@@ -1,0 +1,145 @@
+# 课程设置页面
+
+# 我们的课程设置
+
+从入门到实战，打造你的AI职业进阶路线图
+
+通过系统学习，你将学会：
+
+1. 各式各样AI工具的使用方法
+2. 构建属于自己的AI工作流系统
+3. 在就业市场中脱颖而出
+
+每个岗位都有独特的AI提示词与工具，我们要学的不只是“用AI”，而是让AI高效地为我们工作**。**
+
+## **第一阶段：AI基础课 —— 你的终身学习系统**
+
+学习目标：从零掌握AI核心原理与工具使用，建立个人AI工作流。
+
+1. 核心内容：
+    - 提示词工程（提示词网站PromptPilot生成一个提示词并截图）
+    - 上下文设计与表达逻辑
+    - 各种类型的AI工具
+    - Agent自动化工作流（N8N中工作流图片）
+2. 你可以成为：
+    - 告别“玩AI”，真正理解AI的工作原理
+    - 让AI准确理解你的需求，高效输出可用结果
+    - 建立属于自己的“AI工作流系统”
+3. 案例：
+    - 输出结果：
+    - 提示词：
+    - 需求文档：
+
+## **第二阶段：复合技能课 —— 打通AI与行业的桥梁**
+
+学习目标：掌握AI在不同行业中的实际应用，提升岗位专业能力。
+
+1. 涵盖方向：六大订单班，根据自己的专业/兴趣任选其中之一
+    
+    智能制造｜财经商贸｜智能开发｜视觉设计｜文旅｜大健康
+    
+2. 核心内容：
+    - 行业内的基础概念与专业术语讲解
+    - 行业内核心岗位的工作步骤与重要技能
+    - 行业内AI软件案例实操
+3. 你可以得到：
+    - 超越同龄人的产业与商业认知能力
+    - 理解每个岗位的工作逻辑以及工作门道
+    - “AI思维 + 行业知识”的双重能力
+4. 案例1：视觉设计：为一家新开的**奶茶店**制作一张**商业海报**
+    - 需求：
+        - 确定目标受众、氛围、画面元素，如奶茶杯、水果、光效、杯壁含有水滴，在树荫下，草丛上
+        - AI的风格为实拍、清新
+        - 角度为平视、特写
+        - 要有英文的宣传文案
+    - AI提示词：
+        
+        ```markdown
+        # Role: 商业视觉设计生成器
+        
+        ## Profile
+        - author: LangGPT
+        - version: 1.0
+        - language: 中文
+        - description: 生成风格鲜明、适合商业推广的海报图像，适用于奶茶、甜品等门店新品上市宣传。
+        
+        ## Skills
+        1. 根据场景生成高质量、构图合理的图像提示词；
+        2. 能根据目标用户、情绪氛围控制图像风格与元素；
+        3. 支持对图像风格、焦点、光影、色彩等细节进行微调；
+        4. 提供中英双语提示词版本，适配多平台AI绘图工具。
+        
+        ## OutputFormat（图像生成提示词结构）:
+        ```markdown
+        【中文提示词】
+        主题：失重空间站风格的冰镇水果茶海报（主体锁定）
+        提示词：
+        
+        主体保持不变：一杯透明高杯的冰镇水果茶在失重中漂浮，杯沿覆盖尖锐霜晶，杯壁密布凝结水珠；杯中有橙片、红西柚片、青柠片与冰块，茶汤金橙色；玻璃边缘硬质轮廓光，浅景深，商业美食摄影，超高细节，竖版海报构图。
+        
+        背景可自由改变为：{在此填写你想要的背景场景}。
+        
+        注意：禁止改变主体外观与构图比例（玻璃杯形状、霜晶、凝露、配料种类与数量、杯体大小与位置不变），禁止添加文字/LOGO/水印，前景芒果与木碗青柠可有可无，以干净画面为先。
+        
+        背景示例库（直接替换{在此填写你想要的背景场景}）
+        赛博朋克霓虹夜市，雨中反射、远景霓虹招牌与薄雾
+        日出雪山与云海，干净的高空冷色环境光
+        热带雨林瀑布飞沫，湿润空气与背光树叶散射
+        地中海海岸，白色小镇与湛蓝海面、正午阳光
+        复古法式厨房，奶油色瓷砖与铜锅反光
+        现代极简摄影棚，无缝背景与柔光巨型软箱
+        沙漠金色沙丘与热浪空气抖动
+        深海蓝色背景与柔和体积光（营造水下感）
+        樱花满开的城市河畔，浅粉色花海虚化
+        月球表面与低角度太阳光，远处地球悬挂
+        
+        【English Prompt】
+        
+        Keep the subject unchanged: a tall clear glass of iced fruit tea floating weightlessly, rim covered with spiky frost crystals, dense condensation on the glass; inside the glass are orange slices, ruby-grapefruit, lime slices and ice cubes; golden-orange liquid; hard cool rim light, shallow depth of field, commercial food photography, ultra-high detail, vertical poster composition.
+        
+        The background may vary to: {write your desired background scene here}.
+         
+        Notes: Do not alter the subject’s appearance or composition (glass shape, frost, condensation, fruit types/quantity, glass size and position remain the same). No text/logo/watermark. Foreground mango and wooden bowl of limes are optional; keep the frame clean.
+        
+         English, copy-ready single-line prompts (subject locked, background varies). Paste any one into Doubao or seedream.
+        — Cyberpunk neon night market, rain reflections, distant neon signs and light mist
+        — Sunrise over snowy mountains and a sea of clouds, clean high-altitude cool ambient light
+        — Tropical rainforest waterfall spray, humid air with backlit foliage scattering
+        — Mediterranean coast, white hillside town and deep-blue sea under noon sunlight
+        — Vintage French kitchen, cream-colored tiles and reflections on copper pots
+        — Modern minimal photo studio, seamless backdrop and large softbox diffuse lighting
+        — Desert with golden sand dunes and shimmering heat haze
+        — Deep-ocean blue background with soft volumetric light (submerged/water feel)
+        — City riverside in full cherry blossom, soft pink bokeh of flowers
+        — Lunar surface with low-angle sunlight, Earth hanging in the distant sky
+        ```
+        
+    - 图片效果：
+5. 案例2：搭建一个**小型商品销售**的**独立站**，用来展示你的作品或售卖产品
+    - 需求：
+        - 功能需求：个人电商独立站，具有上架、销售、客服等功能
+        - 模块布局：有首页、产品页联系我们三大板块
+        - 网站风格：主题为为简约高级风
+        - 开发环境：为javascript+xxxx
+    - AI提示词：
+    
+    - 成果展示：
+
+## 第三阶段：垂直技能课 —— 从学习到实战
+
+1. 学习目标：实战驱动，构建岗位级AI工作流，提升职场竞争力。
+2. 核心内容：
+    - 各行业真实工作场景模拟
+    - 岗位工作流设计与AI实战项目
+    - 自动化与智能决策流程构建
+3. 学习成果：
+    - 掌握AI在职场的实战应用能力
+    - 从“懂AI”到“让AI替你工作”
+    - 成为企业争抢的AI高效能人才
+4. 案例展示：自动化制作一份财务报表
+    - 需求：
+        - 自动识别发票与报销单内容；
+        - 智能分类、计算与汇总；
+        - 自动比对银行流水、核对差异；
+        - 一键生成财务报表与分析结果。
+    - 节点展示

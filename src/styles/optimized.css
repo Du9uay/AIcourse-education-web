@@ -1,0 +1,175 @@
+/* 优化后的赛博朋克样式 - 减少性能开销 */
+
+/* 禁用过度的文字阴影效果 */
+.neon-text-optimized {
+  color: #f43f5e;
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+}
+
+.neon-text-purple-optimized {
+  color: #a855f7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.neon-text-cyan-optimized {
+  color: #06b6d4;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* 简化的玻璃效果 */
+.glass-effect-optimized {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+/* 优化的卡片悬浮效果 */
+.cyber-card-optimized {
+  background: linear-gradient(135deg, 
+    rgba(10, 10, 10, 0.9) 0%, 
+    rgba(23, 23, 23, 0.8) 100%
+  );
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cyber-card-optimized:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+/* 简化的按钮样式 */
+.cyber-button-optimized {
+  background: linear-gradient(45deg, rgba(244, 63, 94, 0.8), rgba(168, 85, 247, 0.8));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cyber-button-optimized:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.3);
+}
+
+/* 限制动画范围 */
+@media screen and (max-width: 768px) {
+  /* 移动端禁用复杂动画 */
+  .neon-beam,
+  .data-rain-column,
+  .glitch-overlay {
+    animation: none !important;
+    display: none;
+  }
+  
+  /* 简化背景 */
+  .cyberpunk-grid {
+    animation: none;
+    opacity: 0.2;
+  }
+  
+  /* 减少模糊效果 */
+  .glass-effect-optimized {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
+
+/* 性能模式 - 自动检测低端设备 */
+@media (prefers-reduced-motion: reduce), 
+       (max-device-memory: 2GB),
+       (max-device-width: 640px) {
+  /* 禁用所有动画 */
+  *,
+  *::before,
+  *::after {
+    animation-play-state: paused !important;
+    transition: none !important;
+  }
+  
+  /* 禁用模糊效果 */
+  .glass-effect-optimized,
+  .cyber-card-optimized {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(10, 10, 10, 0.95);
+  }
+  
+  /* 禁用阴影 */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+/* 懒加载占位符 */
+.lazy-load-placeholder {
+  background: linear-gradient(90deg, 
+    rgba(244, 63, 94, 0.1) 0%, 
+    rgba(168, 85, 247, 0.1) 50%, 
+    rgba(244, 63, 94, 0.1) 100%
+  );
+  animation: lazy-pulse 2s ease-in-out infinite;
+}
+
+@keyframes lazy-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+/* 优化滚动性能 */
+.scroll-optimized {
+  will-change: auto;
+  contain: layout style paint;
+}
+
+.scroll-optimized:hover {
+  will-change: transform;
+}
+
+/* 使用CSS Grid替代复杂布局 */
+.grid-optimized {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  contain: layout;
+}
+
+/* 图片优化 */
+img {
+  content-visibility: auto;
+  contain-intrinsic-size: 400px 300px;
+}
+
+/* 字体优化 */
+@font-face {
+  font-family: 'Orbitron';
+  font-display: swap; /* 防止字体加载阻塞 */
+  src: local('Orbitron'), url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+}
+
+/* 优化的渐变文字 */
+.gradient-text-optimized {
+  background: linear-gradient(90deg, #f43f5e, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* 移除动画避免重绘 */
+}
+
+/* 硬件加速优化类 */
+.hw-accelerated {
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* 减少重排的布局 */
+.layout-optimized {
+  contain: layout;
+  content-visibility: auto;
+}

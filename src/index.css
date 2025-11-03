@@ -1,0 +1,667 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+  
+  body {
+    @apply bg-cyber-dark-900 text-cyber-dark-100;
+    font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* 全局隐藏滚动条 */
+  html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+@layer components {
+  /* 赛博朋克玻璃态效果 */
+  .glass-effect {
+    @apply backdrop-blur-xl backdrop-saturate-150;
+    background: linear-gradient(135deg, 
+      rgba(244, 63, 94, 0.1) 0%, 
+      rgba(168, 85, 247, 0.05) 50%, 
+      rgba(6, 182, 212, 0.1) 100%
+    );
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(244, 63, 94, 0.2),
+      0 0 80px rgba(168, 85, 247, 0.1),
+      inset 0 0 20px rgba(244, 63, 94, 0.05);
+  }
+  
+  .glass-effect-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glass-effect-hover:hover {
+    background: linear-gradient(135deg, 
+      rgba(244, 63, 94, 0.15) 0%, 
+      rgba(168, 85, 247, 0.08) 50%, 
+      rgba(6, 182, 212, 0.15) 100%
+    );
+    border-color: rgba(244, 63, 94, 0.5);
+    box-shadow: 
+      0 12px 48px rgba(244, 63, 94, 0.3),
+      0 0 120px rgba(168, 85, 247, 0.2),
+      inset 0 0 30px rgba(244, 63, 94, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* 霓虹文字效果 */
+  .neon-text {
+    text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 40px currentColor,
+      0 0 80px currentColor;
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+  }
+
+  .neon-text-pink {
+    @apply text-cyber-pink-400;
+    text-shadow: 
+      0 0 10px #f43f5e,
+      0 0 20px #f43f5e,
+      0 0 40px #f43f5e,
+      0 0 80px #f43f5e;
+  }
+
+  .neon-text-purple {
+    @apply text-neon-purple-400;
+    text-shadow: 
+      0 0 10px #a855f7,
+      0 0 20px #a855f7,
+      0 0 40px #a855f7,
+      0 0 80px #a855f7;
+  }
+
+  .neon-text-cyan {
+    @apply text-neon-cyan-400;
+    text-shadow: 
+      0 0 10px #06b6d4,
+      0 0 20px #06b6d4,
+      0 0 40px #06b6d4,
+      0 0 80px #06b6d4;
+  }
+
+  /* 霓虹边框 */
+  .neon-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                linear-gradient(45deg, #f43f5e, #a855f7, #06b6d4) border-box;
+  }
+
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #f43f5e, #a855f7, #06b6d4);
+    border-radius: inherit;
+    opacity: 0.5;
+    filter: blur(10px);
+    z-index: -1;
+    animation: neon-border-pulse 3s ease-in-out infinite;
+  }
+
+  /* 赛博朋克按钮 */
+  .cyber-button {
+    @apply relative px-6 py-3 font-bold text-cyber-dark-100 uppercase tracking-wider;
+    background: linear-gradient(45deg, rgba(244, 63, 94, 0.2), rgba(168, 85, 247, 0.2));
+    border: 1px solid rgba(244, 63, 94, 0.5);
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 30%, 100% 100%, 10px 100%, 0 70%);
+    transition: all 0.3s ease;
+  }
+
+  .cyber-button:hover {
+    background: linear-gradient(45deg, rgba(244, 63, 94, 0.4), rgba(168, 85, 247, 0.4));
+    border-color: rgba(244, 63, 94, 0.8);
+    box-shadow: 
+      0 0 20px rgba(244, 63, 94, 0.5),
+      0 0 40px rgba(168, 85, 247, 0.3),
+      inset 0 0 20px rgba(244, 63, 94, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .cyber-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f43f5e, transparent);
+    animation: scan 2s linear infinite;
+  }
+
+  /* 故障文字效果 */
+  .glitch-text {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-text::before {
+    animation: glitch-1 0.5s infinite;
+    color: #f43f5e;
+    z-index: -1;
+  }
+
+  .glitch-text::after {
+    animation: glitch-2 0.5s infinite;
+    color: #06b6d4;
+    z-index: -2;
+  }
+
+  /* 赛博朋克卡片 */
+  .cyber-card {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      rgba(10, 10, 10, 0.9) 0%, 
+      rgba(23, 23, 23, 0.8) 100%
+    );
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    box-shadow: 
+      0 0 30px rgba(244, 63, 94, 0.2),
+      inset 0 0 20px rgba(168, 85, 247, 0.05);
+  }
+
+  .cyber-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #f43f5e, #a855f7, #06b6d4, #3b82f6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(10px);
+  }
+
+  .cyber-card:hover::before {
+    opacity: 0.5;
+  }
+
+  /* 扫描线效果 */
+  .scan-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+
+  /* 数据流动画 */
+  .data-stream {
+    background: linear-gradient(90deg, 
+      transparent,
+      rgba(244, 63, 94, 0.5),
+      rgba(168, 85, 247, 0.5),
+      rgba(6, 182, 212, 0.5),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: data-flow 3s linear infinite;
+  }
+}
+
+@layer utilities {
+  /* 霓虹发光工具类 */
+  .neon-glow-pink {
+    filter: drop-shadow(0 0 10px #f43f5e) drop-shadow(0 0 20px #f43f5e);
+  }
+
+  .neon-glow-purple {
+    filter: drop-shadow(0 0 10px #a855f7) drop-shadow(0 0 20px #a855f7);
+  }
+
+  .neon-glow-cyan {
+    filter: drop-shadow(0 0 10px #06b6d4) drop-shadow(0 0 20px #06b6d4);
+  }
+
+  .neon-glow-blue {
+    filter: drop-shadow(0 0 10px #3b82f6) drop-shadow(0 0 20px #3b82f6);
+  }
+
+  /* 文字渐变 */
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyber-pink-400 via-neon-purple-400 to-neon-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-reverse {
+    @apply bg-gradient-to-l from-cyber-pink-400 via-neon-purple-400 to-neon-cyan-400 bg-clip-text text-transparent;
+  }
+}
+
+/* 自定义动画 */
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes neon-border-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(2px, -2px);
+  }
+  60% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    clip-path: inset(80% 0 10% 0);
+    transform: translate(2px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(80% 0 10% 0);
+    transform: translate(2px, -2px);
+  }
+  40% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-2px, -2px);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 增强的网格样式 - 更好的可见性 */
+.cyberpunk-grid {
+  will-change: auto;
+  animation: grid-move 30s linear infinite;
+  position: relative;
+}
+
+.cyberpunk-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(6, 182, 212, 0.1) 50%, 
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* 优化的霓虹光束 */
+.neon-beam {
+  position: absolute;
+  height: 1px;
+  width: 200%;
+  left: -50%;
+  background: linear-gradient(90deg, transparent, #f43f5e, transparent);
+  box-shadow: 0 0 10px #f43f5e;
+  transform: translateX(-100%);
+  animation: beam-move 8s linear infinite;
+}
+
+.neon-beam-1 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.neon-beam-2 {
+  top: 50%;
+  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+  box-shadow: 0 0 10px #a855f7;
+  animation-delay: 2.5s;
+  animation-duration: 10s;
+}
+
+.neon-beam-3 {
+  top: 80%;
+  background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+  box-shadow: 0 0 10px #06b6d4;
+  animation-delay: 5s;
+  animation-duration: 12s;
+}
+
+@keyframes beam-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 优化的数据雨 */
+.data-rain-container {
+  position: absolute;
+  inset: 0;
+}
+
+.data-rain-column {
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(180deg, 
+    transparent 0%,
+    rgba(6, 182, 212, 0.4) 20%,
+    rgba(244, 63, 94, 0.8) 40%,
+    rgba(168, 85, 247, 1) 50%,
+    rgba(244, 63, 94, 0.8) 60%,
+    rgba(6, 182, 212, 0.4) 80%,
+    transparent 100%
+  );
+  filter: blur(0.8px);
+  box-shadow: 
+    0 0 10px rgba(244, 63, 94, 0.6),
+    0 0 20px rgba(168, 85, 247, 0.4);
+  animation: rain-fall 10s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* 日文字符数据雨样式 - 黑客帝国风格 */
+.data-rain-column-text {
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1.1;
+  letter-spacing: 0;
+  animation: matrix-fall linear infinite;
+  transform: translateZ(0);
+}
+
+.data-rain-column-text span {
+  color: #00ff41;
+  text-shadow: 
+    0 0 3px #00ff41,
+    0 0 8px rgba(0, 255, 65, 0.8);
+  transition: all 0.5s ease;
+}
+
+/* 最亮的字符（头部） */
+.data-rain-column-text span:first-child {
+  color: #ffffff;
+  text-shadow: 
+    0 0 10px #ffffff,
+    0 0 20px #00ff41,
+    0 0 30px #00ff41;
+}
+
+/* 渐变效果 */
+.data-rain-column-text span:nth-child(2) {
+  color: #b3ffb3;
+  text-shadow: 
+    0 0 5px #b3ffb3,
+    0 0 10px rgba(0, 255, 65, 0.6);
+}
+
+.data-rain-column-text span:nth-child(3) {
+  color: #66ff66;
+  text-shadow: 
+    0 0 4px #66ff66,
+    0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+.data-rain-column-text span:nth-child(n+10) {
+  color: #00cc33;
+  opacity: 0.8;
+  text-shadow: 0 0 2px rgba(0, 255, 65, 0.4);
+}
+
+.data-rain-column-text span:nth-child(n+20) {
+  color: #009926;
+  opacity: 0.4;
+  text-shadow: 0 0 1px rgba(0, 255, 65, 0.2);
+}
+
+.data-rain-column-text span:nth-child(n+30) {
+  color: #006619;
+  opacity: 0.2;
+  text-shadow: none;
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* 优化的故障效果 */
+.glitch-overlay {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(244, 63, 94, 0.03),
+    rgba(244, 63, 94, 0.03) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: glitch-simple 0.1s 2;
+}
+
+@keyframes glitch-simple {
+  0%, 100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(1px, -1px);
+  }
+}
+
+/* CRT效果优化 */
+.crt-effect {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* 性能优化：启用GPU加速 */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: auto;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* 减少动画开销 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 优化悬浮效果 */
+.optimized-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: auto;
+}
+
+.optimized-hover:hover {
+  will-change: transform, box-shadow;
+}
+
+/*/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 对于Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* 对于IE和Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* 选中文本样式 */
+::selection {
+  background: rgba(244, 63, 94, 0.5);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.8);
+}
+
+::-moz-selection {
+  background: rgba(244, 63, 94, 0.5);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.8);
+}
+
+/* Section Scroll 平滑全屏滚动效果 */
+.section-scroll-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-scroll-item {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS平滑滚动 */
+}
+
+/* 隐藏section内部滚动条 */
+.section-scroll-item::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* Firefox隐藏滚动条 */
+.section-scroll-item {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隐藏横向滚动条 */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 模糊效果 */
+.blur-sm {
+  filter: blur(2px);
+}
