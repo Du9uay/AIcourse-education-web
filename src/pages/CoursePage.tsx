@@ -305,10 +305,10 @@ const CoursePage: React.FC = () => {
                   掌握Prompt设计技巧，让AI精准理解你的需求
                 </p>
                 <div className="relative rounded-lg overflow-hidden border border-neon-yellow-500/30 cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/AI基础课/提示词工程.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/提示词工程.png`)}
                 >
                   <img
-                    src="/images/课程页面/AI基础课/提示词工程.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/提示词工程.png`}
                     alt="提示词工程"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -324,10 +324,10 @@ const CoursePage: React.FC = () => {
                   学会结构化思考，提升AI输出质量
                 </p>
                 <div className="relative rounded-lg overflow-hidden border border-neon-cyan-500/30 cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/AI基础课/上下文设计与表达逻辑.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/上下文设计与表达逻辑.png`)}
                 >
                   <img
-                    src="/images/课程页面/AI基础课/上下文设计与表达逻辑.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/上下文设计与表达逻辑.png`}
                     alt="上下文设计与表达逻辑"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -343,10 +343,10 @@ const CoursePage: React.FC = () => {
                   全面了解文本、图像、视频、代码等AI工具
                 </p>
                 <div className="relative rounded-lg overflow-hidden border border-cyber-pink-500/30 cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/AI基础课/各种类型的AI工具.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/各种类型的AI工具.png`)}
                 >
                   <img
-                    src="/images/课程页面/AI基础课/各种类型的AI工具.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/各种类型的AI工具.png`}
                     alt="各种类型的AI工具"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -362,10 +362,10 @@ const CoursePage: React.FC = () => {
                   使用N8N等工具构建智能自动化系统
                 </p>
                 <div className="relative rounded-lg overflow-hidden border border-neon-purple-500/30 cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/AI基础课/Agent自动化工作流.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/Agent自动化工作流.png`)}
                 >
                   <img
-                    src="/images/课程页面/AI基础课/Agent自动化工作流.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/AI基础课/Agent自动化工作流.png`}
                     alt="Agent自动化工作流"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -695,37 +695,37 @@ const CoursePage: React.FC = () => {
                   <h5 className="text-xl font-bold text-cyber-pink-400 mb-4">最终效果</h5>
                   <div className="grid grid-cols-4 gap-4 mb-6">
                     <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                      onClick={() => setViewingImage("/images/课程页面/图片效果/奶茶海报1.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报1.png`)}
                     >
                       <img
-                        src="/images/课程页面/图片效果/奶茶海报1.png"
+                        src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报1.png`}
                         alt="AI视觉设计案例1"
                         className="w-full h-auto hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                      onClick={() => setViewingImage("/images/课程页面/图片效果/奶茶海报2.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报2.png`)}
                     >
                       <img
-                        src="/images/课程页面/图片效果/奶茶海报2.png"
+                        src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报2.png`}
                         alt="AI视觉设计案例2"
                         className="w-full h-auto hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                      onClick={() => setViewingImage("/images/课程页面/图片效果/奶茶海报3.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报3.png`)}
                     >
                       <img
-                        src="/images/课程页面/图片效果/奶茶海报3.png"
+                        src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报3.png`}
                         alt="AI视觉设计案例3"
                         className="w-full h-auto hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                      onClick={() => setViewingImage("/images/课程页面/图片效果/奶茶海报4.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报4.png`)}
                     >
                       <img
-                        src="/images/课程页面/图片效果/奶茶海报4.png"
+                        src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/奶茶海报4.png`}
                         alt="AI视觉设计案例4"
                         className="w-full h-auto hover:scale-105 transition-transform duration-500"
                       />
@@ -882,19 +882,19 @@ const CoursePage: React.FC = () => {
                     {/* 第一行：2张图片 */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                        onClick={() => setViewingImage("/images/课程页面/图片效果/1.生成页面.jpeg")}
+                        onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/1.生成页面.jpeg`)}
                       >
                         <img
-                          src="/images/课程页面/图片效果/1.生成页面.jpeg"
+                          src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/1.生成页面.jpeg`}
                           alt="AI生成页面效果"
                           className="w-full h-auto hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                        onClick={() => setViewingImage("/images/课程页面/图片效果/2.主页.jpeg")}
+                        onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/2.主页.jpeg`)}
                       >
                         <img
-                          src="/images/课程页面/图片效果/2.主页.jpeg"
+                          src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/2.主页.jpeg`}
                           alt="网站主页"
                           className="w-full h-auto hover:scale-105 transition-transform duration-500"
                         />
@@ -903,28 +903,28 @@ const CoursePage: React.FC = () => {
                     {/* 第二行：3张图片 */}
                     <div className="grid grid-cols-3 gap-4">
                       <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                        onClick={() => setViewingImage("/images/课程页面/图片效果/3.产品页.jpeg")}
+                        onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/3.产品页.jpeg`)}
                       >
                         <img
-                          src="/images/课程页面/图片效果/3.产品页.jpeg"
+                          src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/3.产品页.jpeg`}
                           alt="产品列表页"
                           className="w-full h-auto hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                        onClick={() => setViewingImage("/images/课程页面/图片效果/4.产品详情页.jpeg")}
+                        onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/4.产品详情页.jpeg`)}
                       >
                         <img
-                          src="/images/课程页面/图片效果/4.产品详情页.jpeg"
+                          src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/4.产品详情页.jpeg`}
                           alt="产品详情页"
                           className="w-full h-auto hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="relative rounded-xl overflow-hidden border-2 border-neon-pink-500/30 shadow-neon-pink cursor-pointer"
-                        onClick={() => setViewingImage("/images/课程页面/图片效果/5.联系我们.jpeg")}
+                        onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/图片效果/5.联系我们.jpeg`)}
                       >
                         <img
-                          src="/images/课程页面/图片效果/5.联系我们.jpeg"
+                          src={`${process.env.PUBLIC_URL}/images/课程页面/图片效果/5.联系我们.jpeg`}
                           alt="联系我们页"
                           className="w-full h-auto hover:scale-105 transition-transform duration-500"
                         />
@@ -1072,19 +1072,19 @@ const CoursePage: React.FC = () => {
               <h4 className="text-2xl font-bold text-neon-purple-400 mb-4">节点展示</h4>
               <div className="grid grid-cols-2 gap-6">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-neon-purple-500/30 shadow-neon-purple cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片1.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片1.png`)}
                 >
                   <img
-                    src="/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片1.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片1.png`}
                     alt="AI赋能流程N8N节点展示1"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden border-2 border-neon-purple-500/30 shadow-neon-purple cursor-pointer"
-                  onClick={() => setViewingImage("/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片2.png")}
+                  onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片2.png`)}
                 >
                   <img
-                    src="/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片2.png"
+                    src={`${process.env.PUBLIC_URL}/images/课程页面/第三阶段/第三阶段ai赋能流程n8n图片2.png`}
                     alt="AI赋能流程N8N节点展示2"
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
