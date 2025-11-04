@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
       iconColor: 'text-neon-blue-500 neon-glow-blue',
       titleColor: 'text-neon-blue-400',
       borderColor: 'border-neon-blue-500/30',
-      image: '/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_软件中AI分析界面.png',
+      image: `${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_软件中AI分析界面.png`,
       description: '数据监测大屏AI分析界面',
       position: '设备工程师（AI检测）',
       salary: '8K~15K'
@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
       iconColor: 'text-cyber-pink-500 neon-glow-pink',
       titleColor: 'text-cyber-pink-400',
       borderColor: 'border-cyber-pink-500/30',
-      image: '/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_N8N工作流节点.png',
+      image: `${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_N8N工作流节点.png`,
       description: 'N8N中AI自动化运营节点',
       position: 'AI电商运营专员',
       salary: '12K~25K'
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
       iconColor: 'text-neon-purple-500 neon-glow-purple',
       titleColor: 'text-neon-purple-400',
       borderColor: 'border-neon-purple-500/30',
-      image: '/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_AI生成图片的界面.png',
+      image: `${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_AI生成图片的界面.png`,
       description: 'comfyUI软件AI生成图片的界面',
       position: 'AI平面设计师',
       salary: '10K起'
@@ -86,7 +86,7 @@ const HomePage: React.FC = () => {
       iconColor: 'text-neon-cyan-500 neon-glow-cyan',
       titleColor: 'text-neon-cyan-400',
       borderColor: 'border-neon-cyan-500/30',
-      image: '/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_达芬奇视频剪辑界面.png',
+      image: `${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_达芬奇视频剪辑界面.png`,
       description: '达芬奇软件中AI自动剪辑界面',
       position: 'AI音视频剪辑师',
       salary: '8K~18K'
@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
       iconColor: 'text-neon-yellow-500 neon-glow-cyan',
       titleColor: 'text-neon-yellow-400',
       borderColor: 'border-neon-yellow-500/30',
-      image: '/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_Claude编程界面.png',
+      image: `${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、AI正在渗透所有行业_各行各业_Claude编程界面.png`,
       description: 'Claude软件AI编程界面',
       position: 'AI前端开发工程师',
       salary: '15K起步'
@@ -246,10 +246,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="relative overflow-hidden rounded-xl border-2 border-red-500/30 shadow-neon-pink h-96 bg-white">
                   <img
-                    src="/images/一、为什么你觉得就业越来越难？/一、为什么你觉得就业越来越难？_传统的招聘岗位越来越少，并且越来越卷，薪资越来越低.png"
+                    src={`${process.env.PUBLIC_URL}/images/一、为什么你觉得就业越来越难？/一、为什么你觉得就业越来越难？_传统的招聘岗位越来越少，并且越来越卷，薪资越来越低.png`}
                     alt="传统的招聘岗位越来越少，并且越来越卷，薪资越来越低"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/一、为什么你觉得就业越来越难？/一、为什么你觉得就业越来越难？_传统的招聘岗位越来越少，并且越来越卷，薪资越来越低.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/一、为什么你觉得就业越来越难？/一、为什么你觉得就业越来越难？_传统的招聘岗位越来越少，并且越来越卷，薪资越来越低.png`)}
                   />
                 </div>
                 <p className="text-lg text-cyber-dark-200 mt-4 text-center">
@@ -267,10 +267,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="relative overflow-hidden rounded-xl border-2 border-neon-cyan-500/30 shadow-neon-cyan h-96 bg-white">
                   <img
-                    src='/images/一、为什么你觉得就业越来越难？/AI关键词的招聘信息增长.jpeg'
+                    src={`${process.env.PUBLIC_URL}/images/一、为什么你觉得就业越来越难？/AI关键词的招聘信息增长.jpeg`}
                     alt="AI关键词的招聘信息增长11%"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage('/images/一、为什么你觉得就业越来越难？/AI关键词的招聘信息增长.jpeg')}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/一、为什么你觉得就业越来越难？/AI关键词的招聘信息增长.jpeg`)}
                   />
                 </div>
                 <p className="text-lg text-cyber-dark-200 mt-4 text-center">
@@ -332,10 +332,10 @@ const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-lg border border-neon-yellow-500/30 bg-white h-96">
                     <img
-                      src="/images/二、和AI相关的岗位薪资那么高？/薪资提升-1.png"
+                      src={`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-1.png`}
                       alt="AI岗位薪资对比数据"
                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      onClick={() => setViewingImage("/images/二、和AI相关的岗位薪资那么高？/薪资提升-1.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-1.png`)}
                     />
                   </div>
                   <p className="text-sm text-cyber-dark-200 text-center">AI编程全栈工程师</p>
@@ -343,10 +343,10 @@ const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-lg border border-neon-yellow-500/30 bg-white h-96">
                     <img
-                      src="/images/二、和AI相关的岗位薪资那么高？/薪资提升-2.png"
+                      src={`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-2.png`}
                       alt="AI技能带来的薪资增长"
                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      onClick={() => setViewingImage("/images/二、和AI相关的岗位薪资那么高？/薪资提升-2.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-2.png`)}
                     />
                   </div>
                   <p className="text-sm text-cyber-dark-200 text-center">AI漫画师</p>
@@ -354,10 +354,10 @@ const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-lg border border-neon-yellow-500/30 bg-white h-96">
                     <img
-                      src="/images/二、和AI相关的岗位薪资那么高？/薪资提升-3.png"
+                      src={`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-3.png`}
                       alt="企业对AI人才的薪资投入"
                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      onClick={() => setViewingImage("/images/二、和AI相关的岗位薪资那么高？/薪资提升-3.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/薪资提升-3.png`)}
                     />
                   </div>
                   <p className="text-sm text-cyber-dark-200 text-center">AI策略产品经理</p>
@@ -430,10 +430,10 @@ const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-lg border border-red-500/30 bg-white h-64">
                     <img
-                      src="/images/二、和AI相关的岗位薪资那么高？/严峻现实.png"
+                      src={`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/严峻现实.png`}
                       alt="不会AI面临的就业困境"
                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      onClick={() => setViewingImage("/images/二、和AI相关的岗位薪资那么高？/严峻现实.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/严峻现实.png`)}
                     />
                   </div>
                   <p className="text-sm text-cyber-dark-200 text-center">被辞职的人</p>
@@ -441,10 +441,10 @@ const HomePage: React.FC = () => {
                 <div className="space-y-3">
                   <div className="relative overflow-hidden rounded-lg border border-red-500/30 bg-white h-64">
                     <img
-                      src="/images/二、和AI相关的岗位薪资那么高？/严峻现实2.png"
+                      src={`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/严峻现实2.png`}
                       alt="传统岗位被AI替代的趋势"
                       className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                      onClick={() => setViewingImage("/images/二、和AI相关的岗位薪资那么高？/严峻现实2.png")}
+                      onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/二、和AI相关的岗位薪资那么高？/严峻现实2.png`)}
                     />
                   </div>
                   <p className="text-sm text-cyber-dark-200 text-center">垃圾桶内的毕业生简历</p>
@@ -509,10 +509,10 @@ const HomePage: React.FC = () => {
               <div className="w-full max-w-md">
                 <div className="relative overflow-hidden rounded-lg border border-neon-blue-500/30 bg-white h-64">
                   <img
-                    src="/images/三、企业需要AI的原因/三、企业需要AI的原因_勒紧裤腰带.png"
+                    src={`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_勒紧裤腰带.png`}
                     alt="勒紧裤腰带过日子的时代"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/三、企业需要AI的原因/三、企业需要AI的原因_勒紧裤腰带.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_勒紧裤腰带.png`)}
                   />
                 </div>
                 <p className="text-sm text-cyber-dark-200 text-center mt-3">勒紧裤腰带过日子的时代</p>
@@ -562,10 +562,10 @@ const HomePage: React.FC = () => {
                     <div className="space-y-3">
                       <div className="relative overflow-hidden rounded-lg border border-neon-purple-500/30 bg-white h-64">
                         <img
-                          src="/images/三、企业需要AI的原因/三、企业需要AI的原因_节省人力成本.png"
+                          src={`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_节省人力成本.png`}
                           alt="节省人力成本"
                           className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/三、企业需要AI的原因/三、企业需要AI的原因_节省人力成本.png")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_节省人力成本.png`)}
                         />
                       </div>
                     </div>
@@ -578,10 +578,10 @@ const HomePage: React.FC = () => {
                     <div className="space-y-3">
                       <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white h-64">
                         <img
-                          src="/images/三、企业需要AI的原因/三、企业需要AI的原因_提升工作效率.png"
+                          src={`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_提升工作效率.png`}
                           alt="提升工作效率"
                           className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/三、企业需要AI的原因/三、企业需要AI的原因_提升工作效率.png")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_提升工作效率.png`)}
                         />
                       </div>
                     </div>
@@ -631,10 +631,10 @@ const HomePage: React.FC = () => {
               <div className="w-full max-w-md">
                 <div className="relative overflow-hidden rounded-lg border border-cyber-pink-500/30 bg-white h-64">
                   <img
-                    src="/images/三、企业需要AI的原因/三、企业需要AI的原因_AI人才成稀缺物种.png"
+                    src={`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_AI人才成稀缺物种.png`}
                     alt="AI人才成稀缺物种"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/三、企业需要AI的原因/三、企业需要AI的原因_AI人才成稀缺物种.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/三、企业需要AI的原因/三、企业需要AI的原因_AI人才成稀缺物种.png`)}
                   />
                 </div>
                 <p className="text-sm text-cyber-dark-200 text-center mt-3">AI人才成稀缺物种</p>
@@ -685,10 +685,10 @@ const HomePage: React.FC = () => {
                 <p className="text-lg text-cyber-dark-300 mb-4">AI虚拟数字人</p>
                 <div className="relative overflow-hidden rounded-lg border border-cyber-pink-500/30 bg-white h-48">
                   <img
-                    src="/images/四、AI正在渗透所有行业/四、日常生活_数字人.png"
+                    src={`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_数字人.png`}
                     alt="AI虚拟数字人"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/四、AI正在渗透所有行业/四、日常生活_数字人.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_数字人.png`)}
                   />
                 </div>
               </div>
@@ -700,10 +700,10 @@ const HomePage: React.FC = () => {
                 <p className="text-lg text-cyber-dark-300 mb-4">AI绘画</p>
                 <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white h-48">
                   <img
-                    src="/images/四、AI正在渗透所有行业/四、日常生活_AI绘图.png"
+                    src={`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_AI绘图.png`}
                     alt="AI绘画"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/四、AI正在渗透所有行业/四、日常生活_AI绘图.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_AI绘图.png`)}
                   />
                 </div>
               </div>
@@ -715,10 +715,10 @@ const HomePage: React.FC = () => {
                 <p className="text-lg text-cyber-dark-300 mb-4">AI客服</p>
                 <div className="relative overflow-hidden rounded-lg border border-neon-purple-500/30 bg-white h-48">
                   <img
-                    src="/images/四、AI正在渗透所有行业/四、日常生活_AI客服.png"
+                    src={`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_AI客服.png`}
                     alt="AI客服"
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                    onClick={() => setViewingImage("/images/四、AI正在渗透所有行业/四、日常生活_AI客服.png")}
+                    onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/四、AI正在渗透所有行业/四、日常生活_AI客服.png`)}
                   />
                 </div>
               </div>
@@ -883,10 +883,10 @@ const HomePage: React.FC = () => {
                       </div>
                       <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white">
                         <img
-                          src="/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_写作问答类AI工具logo.jpg"
+                          src={`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_写作问答类AI工具logo.jpg`}
                           alt="写作问答类AI工具"
                           className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_写作问答类AI工具logo.jpg")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_写作问答类AI工具logo.jpg`)}
                         />
                       </div>
                     </div>
@@ -897,10 +897,10 @@ const HomePage: React.FC = () => {
                       </div>
                       <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white">
                         <img
-                          src="/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_图像创作类AI工具logo.jpg"
+                          src={`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_图像创作类AI工具logo.jpg`}
                           alt="图像创作类AI工具"
                           className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_图像创作类AI工具logo.jpg")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_图像创作类AI工具logo.jpg`)}
                         />
                       </div>
                     </div>
@@ -911,10 +911,10 @@ const HomePage: React.FC = () => {
                       </div>
                       <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white">
                         <img
-                          src="/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_视频生成类AI工具logo.jpg"
+                          src={`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_视频生成类AI工具logo.jpg`}
                           alt="视频生成类AI工具"
                           className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_视频生成类AI工具logo.jpg")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_视频生成类AI工具logo.jpg`)}
                         />
                       </div>
                     </div>
@@ -925,10 +925,10 @@ const HomePage: React.FC = () => {
                       </div>
                       <div className="relative overflow-hidden rounded-lg border border-neon-cyan-500/30 bg-white">
                         <img
-                          src="/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_编程开发类AI工具logo.jpg"
+                          src={`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_编程开发类AI工具logo.jpg`}
                           alt="编程开发类AI工具"
                           className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 cursor-pointer"
-                          onClick={() => setViewingImage("/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_编程开发类AI工具logo.jpg")}
+                          onClick={() => setViewingImage(`${process.env.PUBLIC_URL}/images/五、大专生学会用AI的最大问题/五、大专生学会用AI的最大问题_编程开发类AI工具logo.jpg`)}
                         />
                       </div>
                     </div>

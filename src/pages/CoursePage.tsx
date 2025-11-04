@@ -27,10 +27,10 @@ const CoursePage: React.FC = () => {
   // 轮播图状态
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselImages = [
-    '/images/课程页面/第一阶段轮播图/七、我们的课程设置_AI工具logo轮播图.png',
-    '/images/课程页面/第一阶段轮播图/七、构建属于自己的AI工作流系统.png',
-    '/images/课程页面/第一阶段轮播图/七、网页作品集-1.png',
-    '/images/课程页面/第一阶段轮播图/七、网页作品集-2.png'
+    `${process.env.PUBLIC_URL}/images/课程页面/第一阶段轮播图/七、我们的课程设置_AI工具logo轮播图.png`,
+    `${process.env.PUBLIC_URL}/images/课程页面/第一阶段轮播图/七、构建属于自己的AI工作流系统.png`,
+    `${process.env.PUBLIC_URL}/images/课程页面/第一阶段轮播图/七、网页作品集-1.png`,
+    `${process.env.PUBLIC_URL}/images/课程页面/第一阶段轮播图/七、网页作品集-2.png`
   ];
 
   // 使用section滚动Hook
