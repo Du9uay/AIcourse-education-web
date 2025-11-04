@@ -439,7 +439,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_智能制造.png)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_智能制造.png)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -455,7 +455,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_财经商贸.jpg)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_财经商贸.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -471,7 +471,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_智能开发.jpg)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_智能开发.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -487,7 +487,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_视觉设计.jpg)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_视觉设计.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -503,7 +503,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_文旅.jpg)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_文旅.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
@@ -519,7 +519,7 @@ const CoursePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 className="cyber-card rounded-xl text-center relative overflow-hidden h-48"
                 style={{
-                  backgroundImage: 'url(/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_大健康.jpg)',
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/课程页面/订单班图片/七、我们的课程设置_第二阶段_涵盖方向_大健康.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
