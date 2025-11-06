@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AIcourse-education-web/static/css/main.fee7e558.css",
-    "main.js": "/AIcourse-education-web/static/js/main.fc84d763.js",
+    "main.css": "/AIcourse-education-web/static/css/main.1019aee2.css",
+    "main.js": "/AIcourse-education-web/static/js/main.a6f0327a.js",
     "index.html": "/AIcourse-education-web/index.html",
-    "main.fee7e558.css.map": "/AIcourse-education-web/static/css/main.fee7e558.css.map",
-    "main.fc84d763.js.map": "/AIcourse-education-web/static/js/main.fc84d763.js.map"
+    "main.1019aee2.css.map": "/AIcourse-education-web/static/css/main.1019aee2.css.map",
+    "main.a6f0327a.js.map": "/AIcourse-education-web/static/js/main.a6f0327a.js.map"
   },
   "entrypoints": [
-    "static/css/main.fee7e558.css",
-    "static/js/main.fc84d763.js"
+    "static/css/main.1019aee2.css",
+    "static/js/main.a6f0327a.js"
   ]
 }
